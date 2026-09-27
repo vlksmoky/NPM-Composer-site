@@ -9,24 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
-
-  <style>
-    .video-wrapper {
-      width: 100%;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    
-    .video-wrapper .ratio {
-      min-height: 450px;
-    }
-
-    @media (max-width: 768px) {
-      .video-wrapper .ratio {
-        min-height: auto;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -64,15 +46,14 @@
 
             <h2 class="mb-3">Видео: как устроен node_modules изнутри</h2>
             <p>Короткий разбор того, что происходит в папке <code>node_modules</code> после <code>npm install</code> — вложенные зависимости, дедупликация версий, почему папка бывает такой тяжёлой.</p>
-            <div class="video-wrapper mb-4">
-              <div class="ratio ratio-16x9">
-                <iframe
-                  src="https://rutube.ru/play/embed/5bde3eaa66c2e3116e70c33ba2b15b51/"
-                  style="border: none;"
-                  allow="clipboard-write; autoplay"
-                  allowFullScreen
-                ></iframe>
-              </div>
+            
+            <div class="ratio ratio-16x9 mb-3">
+              <iframe
+                src="https://rutube.ru/play/embed/5bde3eaa66c2e3116e70c33ba2b15b51/"
+                style="border: none;"
+                allow="clipboard-write; autoplay"
+                allowFullScreen
+              ></iframe>
             </div>
 
             <h2 class="mt-5 mb-3">Что почитать дальше</h2>
