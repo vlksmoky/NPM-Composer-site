@@ -9,6 +9,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
+
+  <style>
+    /* Стили для действительно большого видеоплеера */
+    .video-container {
+      width: 100%;
+      height: 500px; /* Вы можете изменить высоту, например на 550px или 600px */
+      max-width: 100%;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px; /* Небольшое скругление углов для красоты */
+    }
+
+    @media (max-width: 768px) {
+      .video-container {
+        height: 260px; /* Высота для мобильных экранов */
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -47,7 +68,8 @@
             <h2 class="mb-3">Видео: как устроен node_modules изнутри</h2>
             <p>Короткий разбор того, что происходит в папке <code>node_modules</code> после <code>npm install</code> — вложенные зависимости, дедупликация версий, почему папка бывает такой тяжёлой.</p>
             
-            <div class="ratio ratio-16x9 mb-3">
+            <!-- Большой плеер -->
+            <div class="video-container mb-4">
               <iframe
                 src="https://rutube.ru/play/embed/5bde3eaa66c2e3116e70c33ba2b15b51/"
                 style="border: none;"
