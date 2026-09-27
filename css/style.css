@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Базовый контейнер
-   ========================================================================== */
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -11,9 +8,6 @@
   box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Сетка Hero (7 колонок / 5 колонок)
-   ========================================================================== */
 .hero__grid {
   display: flex;
   flex-direction: column;
@@ -27,19 +21,16 @@
   }
   
   .hero__content {
-    flex: 0 0 calc(58.333% - 1rem); /* 7/12 колонок */
+    flex: 0 0 calc(58.333% - 1rem); 
     max-width: calc(58.333% - 1rem);
   }
   
   .hero__terminal {
-    flex: 0 0 calc(41.666% - 1rem); /* 5/12 колонок */
+    flex: 0 0 calc(41.666% - 1rem); 
     max-width: calc(41.666% - 1rem);
   }
 }
 
-/* ==========================================================================
-   Основной макет страниц (8 колонок Контент / 4 колонки Сайдбар)
-   ========================================================================== */
 .main-layout {
   display: flex;
   flex-direction: column;
@@ -53,19 +44,16 @@
   }
 
   .main-layout__content {
-    flex: 0 0 calc(66.666% - 1.33rem); /* 8/12 колонок */
+    flex: 0 0 calc(66.666% - 1.33rem); 
     max-width: calc(66.666% - 1.33rem);
   }
 
   .main-layout__sidebar {
-    flex: 0 0 calc(33.333% - 0.67rem); /* 4/12 колонки */
+    flex: 0 0 calc(33.333% - 0.67rem); 
     max-width: calc(33.333% - 0.67rem);
   }
 }
 
-/* ==========================================================================
-   Макет формы контактов (7 колонок Форма / 5 колонок Сайдбар)
-   ========================================================================== */
 .contacts-layout {
   display: flex;
   flex-direction: column;
@@ -89,9 +77,6 @@
   }
 }
 
-/* ==========================================================================
-   Сетка подвала (3 равные колонки по 4)
-   ========================================================================== */
 .site-footer__grid {
   display: flex;
   flex-direction: column;
@@ -109,7 +94,6 @@
   }
 }
 
-/* Дополнительные вспомогательные стили для элементов Bootstrap */
 .table-responsive {
   overflow-x: auto;
 }
@@ -135,7 +119,7 @@
   white-space: normal;
 }
 .navbar {
-  background-color: #1a1e24; /* или ваш темный цвет */
+  background-color: #1a1e24; 
   padding: 1rem 0;
 }
 
@@ -165,9 +149,8 @@
   color: #ffffff;
 }
 
-/* Скрытие меню на мобильных (при необходимости) */
 .navbar-toggler {
-  display: none; /* Отображать через media-query для мобилок */
+  display: none; 
 }
 .sidebar__card {
   background: #f8fafc;
@@ -187,11 +170,9 @@
   padding-left: 1.25rem;
   margin-bottom: 0;
 }
-/* ==========================================================================
-   Стилизация под терминал / командную строку (CMD)
-   ========================================================================== */
+
 .term {
-  background-color: #0c0c0c; /* Тёмно-черный фон классической CMD */
+  background-color: #0c0c0c; 
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -200,7 +181,6 @@
   font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
 }
 
-/* Верхняя плашка окна терминала */
 .term__bar {
   background-color: #1f1f1f;
   padding: 0.5rem 1rem;
@@ -210,7 +190,6 @@
   position: relative;
 }
 
-/* Кнопки "закрыть/свернуть/развернуть" */
 .term__dot {
   width: 12px;
   height: 12px;
@@ -231,7 +210,6 @@
   background-color: #27c93f;
 }
 
-/* Заголовок окна */
 .term__label {
   color: #888888;
   font-size: 0.85rem;
@@ -240,7 +218,6 @@
   font-family: sans-serif;
 }
 
-/* Тело терминала и код */
 .term__body {
   position: relative;
   padding: 1.25rem;
@@ -248,14 +225,13 @@
 
 .term__body pre {
   margin: 0;
-  color: #cccccc; /* Светло-серый текст консоли */
+  color: #cccccc; 
   font-size: 0.95rem;
   line-height: 1.6;
   white-space: pre-wrap;
   word-break: break-all;
 }
 
-/* Кнопка "Скопировать" */
 .term__copy {
   position: absolute;
   top: 0.75rem;
@@ -274,9 +250,7 @@
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
-/* ==========================================================================
-   1. Базовая типографика и сброс стилей
-   ========================================================================== */
+
 body {
   margin: 0;
   padding: 0;
@@ -325,9 +299,6 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-   2. Красивые адаптивные таблицы
-   ========================================================================== */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
@@ -368,9 +339,6 @@ li {
   background-color: #f8fafc;
 }
 
-/* ==========================================================================
-   3. Поле поиска и Формы (Контакты / Поиск в глоссарии)
-   ========================================================================== */
 .form-control,
 .form-select {
   width: 100%;
@@ -415,7 +383,6 @@ li {
   flex: 1 1 100%;
 }
 
-/* Кнопки */
 .btn {
   display: inline-block;
   font-weight: 600;
@@ -438,9 +405,6 @@ li {
   text-decoration: none;
 }
 
-/* ==========================================================================
-   4. Карточки глоссария
-   ========================================================================== */
 .glossary__term {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -460,9 +424,6 @@ li {
   color: #4a5568;
 }
 
-/* ==========================================================================
-   5. Шаги процессов (Process steps)
-   ========================================================================== */
 .process {
   display: flex;
   flex-direction: column;
@@ -487,4 +448,37 @@ li {
 .process__text {
   margin-bottom: 0;
   color: #718096;
+}
+@media (max-width: 768px) {
+  .navbar__container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .navbar__brand {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 0.6rem 1rem;
+    background-color: #2d3748;
+    color: #ffffff;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    background-color: #3182ce;
+  }
 }
