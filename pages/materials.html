@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учебные материалы — pkg.guide</title>
+  <meta name="description" content="Видеоразбор менеджеров зависимостей и подборка материалов для дальнейшего изучения.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <a class="visually-hidden-focusable" href="#main">Перейти к основному содержанию</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Основная навигация">
+      <div class="container navbar__container">
+        <a class="navbar-brand" href="../index.html">pkg<span>.guide</span></a>
+        <button class="navbar-toggler" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">О менеджерах</a></li>
+            <li class="nav-item"><a class="nav-link" href="npm.html">NPM</a></li>
+            <li class="nav-item"><a class="nav-link" href="composer.html">Composer</a></li>
+            <li class="nav-item"><a class="nav-link" href="commands.html">Команды</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="materials.html">Материалы</a></li>
+            <li class="nav-item"><a class="nav-link" href="glossary.html">Глоссарий</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="main-layout">
+          <div class="main-layout__content">
+            <h1 class="mb-4">Учебные материалы</h1>
+
+            <h2 class="mb-3">Видео: как устроен node_modules изнутри</h2>
+            <p>Короткий разбор того, что происходит в папке <code>node_modules</code> после <code>npm install</code> — вложенные зависимости, дедупликация версий, почему папка бывает такой тяжёлой.</p>
+            <div class="ratio ratio-16x9 mb-3">
+              <video controls preload="metadata" poster="https://miro.medium.com/1*UQnh6NKrcnO9Kp7BKXm1Mw.jpeg">
+                <source src="https://rr3---sn-u15hn5-cc.googlevideo.com/videoplayback?expire=1790529077&ei=1fm4aovDKIH6-LAPmvDwgAQ&ip=45.39.25.152&id=o-AJG_gKSVG5norEdFcF0IfBcT9Wrot-b0oaDHq1yoRASA&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=176&bui=AWzQHwpKwjpicvMXGWAJnd_z4votPP_sOJL1umGnWeu0vR8N6iiSmmjfwRRekpmMquH2w3Ls93i9narb&spc=I-rgIXL2mCV2eaoHcaRlPdxwKhGnx_5Hwcna0Uc_SRp22KNM170f8wyM&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=283.237&lmt=1661680242697208&fexp=51565115,52112905,52178456,52184226&c=ANDROID&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AE0s2JYwRgIhAIBYZnUM4oBXAw_UZu4y5i42s4_tIn3X6QkQ2c3mqnjMAiEA9vkmOy_lZwIeZMUsB_SXL9eyHyBNtGiNUW1c5z2HsX8%3D&rm=sn-pmcg-bg0e7z,sn-bg0esr7l&rrc=79,104,191&req_id=6bd570b11184a3ee&rms=nxu,au&ipbypass=yes&redirect_counter=3&cm2rm=sn-5hne6e7s&cms_redirect=yes&cmsv=e&met=1790507485,&mh=7S&mip=94.183.221.20&mm=34&mn=sn-u15hn5-cc&ms=ltu&mt=1790507081&mv=m&mvi=3&pl=24&lsparams=cps,ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAJfVP8bd6umpF_4fK-7rmBgPu0efwE_XoJsaP1cb1I6RAiEAtoUamo_ZsyRfdBFVVYPdaeEmstDiWbKtVsIZjJ1GJh8%3D">
+                Ваш браузер не поддерживает встроенное видео. Скачать ролик можно
+                <a href="C:\Users\vlksmoky\Downloads\modules.mp4">по ссылке</a>.
+              </video>
+            </div>
+            <h2 class="mt-5 mb-3">Что почитать дальше</h2>
+            <ul>
+              <li><strong>Официальная документация NPM</strong> — раздел про <code>package.json</code> и семантическое версионирование.</li>
+              <li><strong>Официальная документация Composer</strong> — раздел «Basic usage» и «Autoloading».</li>
+              <li><strong>Спецификация semver.org</strong> — как правильно читать номера версий вида <code>2.14.3</code>.</li>
+              <li><strong>PSR-4</strong> — стандарт автозагрузки классов в PHP, на который опирается Composer.</li>
+            </ul>
+
+            <h2 class="mt-5 mb-3">Подпишитесь на новые разборы</h2>
+            <form class="subscription-form">
+              <div class="subscription-form__group">
+                <label for="materials-email" class="form-label">Email</label>
+                <input type="email" id="materials-email" class="form-control" placeholder="you@example.com" required>
+              </div>
+              <button type="submit" class="btn btn-brand">Подписаться</button>
+            </form>
+          </div>
+
+          <aside class="main-layout__sidebar">
+            <div class="sidebar__card">
+              <h4 class="sidebar__title">Практика</h4>
+              <p class="mb-0">Лучший способ разобраться — создать пустой проект и пройти шаги установки зависимостей руками, глядя на <a href="npm.html">инструкцию по NPM</a> или <a href="composer.html">по Composer</a>.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__col">
+          <h5 class="site-footer__heading">pkg.guide</h5>
+          <p>Учебный справочник по менеджерам зависимостей.</p>
+        </div>
+        <div class="site-footer__col">
+          <h5 class="site-footer__heading">Разделы</h5>
+          <ul class="site-footer__list">
+            <li><a href="npm.html">NPM</a></li>
+            <li><a href="composer.html">Composer</a></li>
+            <li><a href="glossary.html">Глоссарий</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h5 class="site-footer__heading">Контакты</h5>
+          <ul class="site-footer__list">
+            <li><a href="mailto:hello@pkg.guide">hello@pkg.guide</a></li>
+            <li><a href="contacts.html">Написать нам</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">&copy; 2026 pkg.guide. Учебный проект.</div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Наверх">↑</button>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

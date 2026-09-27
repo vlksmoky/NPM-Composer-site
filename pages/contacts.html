@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — pkg.guide</title>
+  <meta name="description" content="Нашли ошибку или есть вопрос по NPM и Composer — напишите нам.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <a class="visually-hidden-focusable" href="#main">Перейти к основному содержанию</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Основная навигация">
+      <div class="container navbar__container">
+        <a class="navbar-brand" href="../index.html">pkg<span>.guide</span></a>
+        <button class="navbar-toggler" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">О менеджерах</a></li>
+            <li class="nav-item"><a class="nav-link" href="npm.html">NPM</a></li>
+            <li class="nav-item"><a class="nav-link" href="composer.html">Composer</a></li>
+            <li class="nav-item"><a class="nav-link" href="commands.html">Команды</a></li>
+            <li class="nav-item"><a class="nav-link" href="materials.html">Материалы</a></li>
+            <li class="nav-item"><a class="nav-link" href="glossary.html">Глоссарий</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="contacts-layout">
+          <div class="contacts-layout__form">
+            <h1 class="mb-4">Контакты</h1>
+            <p class="mb-4">Нашли ошибку в примере кода, устаревшую команду или просто хотите что-то спросить про NPM и Composer — напишите через форму или на почту <a href="mailto:hello@pkg.guide">hello@pkg.guide</a>.</p>
+
+            <form novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Имя</label>
+                  <input type="text" class="form-control" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="contact-email" required>
+                </div>
+                <div class="form-group form-group--full">
+                  <label for="contact-topic" class="form-label">Тема обращения</label>
+                  <select class="form-select" id="contact-topic">
+                    <option selected>Ошибка в примере кода</option>
+                    <option>Вопрос про NPM</option>
+                    <option>Вопрос про Composer</option>
+                    <option>Другое</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--full">
+                  <label for="contact-message" class="form-label">Сообщение</label>
+                  <textarea class="form-control" id="contact-message" rows="4" required></textarea>
+                </div>
+                <div class="form-group form-group--full">
+                  <button type="submit" class="btn btn-brand">Отправить</button>
+                </div>
+              </div>
+            </form>
+            <p class="text-body-secondary small mt-2">Форма демонстрационная: чтобы сообщения реально приходили на почту, подключите бэкенд или сервис вроде Formspree/EmailJS.</p>
+          </div>
+
+          <aside class="contacts-layout__sidebar">
+            <div class="sidebar__card">
+              <h4 class="sidebar__title">Полезные ссылки</h4>
+              <ul class="sidebar__list">
+                <li><a href="https://docs.npmjs.com" target="_blank" rel="noopener">Официальная документация NPM</a></li>
+                <li><a href="https://getcomposer.org/doc/" target="_blank" rel="noopener">Официальная документация Composer</a></li>
+                <li><a href="https://semver.org" target="_blank" rel="noopener">Спецификация semver.org</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__col">
+          <h5 class="site-footer__heading">pkg.guide</h5>
+          <p>Учебный справочник по менеджерам зависимостей.</p>
+        </div>
+        <div class="site-footer__col">
+          <h5 class="site-footer__heading">Разделы</h5>
+          <ul class="site-footer__list">
+            <li><a href="npm.html">NPM</a></li>
+            <li><a href="composer.html">Composer</a></li>
+            <li><a href="glossary.html">Глоссарий</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h5 class="site-footer__heading">Контакты</h5>
+          <ul class="site-footer__list">
+            <li><a href="mailto:hello@pkg.guide">hello@pkg.guide</a></li>
+            <li><a href="contacts.html">Написать нам</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">&copy; 2026 pkg.guide. Учебный проект.</div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Наверх">↑</button>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

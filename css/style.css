@@ -1,0 +1,490 @@
+/* ==========================================================================
+   Базовый контейнер
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Сетка Hero (7 колонок / 5 колонок)
+   ========================================================================== */
+.hero__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .hero__grid {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .hero__content {
+    flex: 0 0 calc(58.333% - 1rem); /* 7/12 колонок */
+    max-width: calc(58.333% - 1rem);
+  }
+  
+  .hero__terminal {
+    flex: 0 0 calc(41.666% - 1rem); /* 5/12 колонок */
+    max-width: calc(41.666% - 1rem);
+  }
+}
+
+/* ==========================================================================
+   Основной макет страниц (8 колонок Контент / 4 колонки Сайдбар)
+   ========================================================================== */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .main-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .main-layout__content {
+    flex: 0 0 calc(66.666% - 1.33rem); /* 8/12 колонок */
+    max-width: calc(66.666% - 1.33rem);
+  }
+
+  .main-layout__sidebar {
+    flex: 0 0 calc(33.333% - 0.67rem); /* 4/12 колонки */
+    max-width: calc(33.333% - 0.67rem);
+  }
+}
+
+/* ==========================================================================
+   Макет формы контактов (7 колонок Форма / 5 колонок Сайдбар)
+   ========================================================================== */
+.contacts-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .contacts-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contacts-layout__form {
+    flex: 0 0 calc(58.333% - 1rem);
+    max-width: calc(58.333% - 1rem);
+  }
+
+  .contacts-layout__sidebar {
+    flex: 0 0 calc(41.666% - 1rem);
+    max-width: calc(41.666% - 1rem);
+  }
+}
+
+/* ==========================================================================
+   Сетка подвала (3 равные колонки по 4)
+   ========================================================================== */
+.site-footer__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .site-footer__grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-footer__col {
+    flex: 1;
+  }
+}
+
+/* Дополнительные вспомогательные стили для элементов Bootstrap */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.visually-hidden-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.visually-hidden-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+.navbar {
+  background-color: #1a1e24; /* или ваш темный цвет */
+  padding: 1rem 0;
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #a0aec0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+}
+
+/* Скрытие меню на мобильных (при необходимости) */
+.navbar-toggler {
+  display: none; /* Отображать через media-query для мобилок */
+}
+.sidebar__card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar__title {
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.sidebar__list {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+/* ==========================================================================
+   Стилизация под терминал / командную строку (CMD)
+   ========================================================================== */
+.term {
+  background-color: #0c0c0c; /* Тёмно-черный фон классической CMD */
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 1.5rem 0;
+  border: 1px solid #333333;
+  font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+}
+
+/* Верхняя плашка окна терминала */
+.term__bar {
+  background-color: #1f1f1f;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2d2d2d;
+  position: relative;
+}
+
+/* Кнопки "закрыть/свернуть/развернуть" */
+.term__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.term__dot--red {
+  background-color: #ff5f56;
+}
+
+.term__dot--yellow {
+  background-color: #ffbd2e;
+}
+
+.term__dot--green {
+  background-color: #27c93f;
+}
+
+/* Заголовок окна */
+.term__label {
+  color: #888888;
+  font-size: 0.85rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+}
+
+/* Тело терминала и код */
+.term__body {
+  position: relative;
+  padding: 1.25rem;
+}
+
+.term__body pre {
+  margin: 0;
+  color: #cccccc; /* Светло-серый текст консоли */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Кнопка "Скопировать" */
+.term__copy {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #cccccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.term__copy:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+/* ==========================================================================
+   1. Базовая типографика и сброс стилей
+   ========================================================================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2d3748;
+  background-color: #f7fafc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #1a202c;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; margin-top: 2rem; }
+h3 { font-size: 1.35rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: #3182ce;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2b6cb0;
+  text-decoration: underline;
+}
+
+/* Списки */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   2. Красивые адаптивные таблицы
+   ========================================================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.data-table caption {
+  padding: 0.75rem;
+  font-weight: 600;
+  color: #718096;
+  text-align: left;
+  caption-side: bottom;
+}
+
+.data-table th, 
+.data-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th {
+  background-color: #edf2f7;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ==========================================================================
+   3. Поле поиска и Формы (Контакты / Поиск в глоссарии)
+   ========================================================================== */
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #4a5568;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 0.625rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group--full {
+  flex: 1 1 100%;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-brand {
+  background-color: #3182ce;
+  color: #ffffff;
+}
+
+.btn-brand:hover {
+  background-color: #2b6cb0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   4. Карточки глоссария
+   ========================================================================== */
+.glossary__term {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.glossary__word {
+  margin-bottom: 0.5rem;
+  color: #2b6cb0;
+}
+
+.glossary__def {
+  margin-bottom: 0;
+  color: #4a5568;
+}
+
+/* ==========================================================================
+   5. Шаги процессов (Process steps)
+   ========================================================================== */
+.process {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.process__step {
+  display: flex;
+  background: #ffffff;
+  border-left: 4px solid #3182ce;
+  padding: 1.25rem;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.process__title {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.process__text {
+  margin-bottom: 0;
+  color: #718096;
+}
