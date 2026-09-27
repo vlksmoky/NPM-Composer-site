@@ -1,6 +1,6 @@
 # pkg.guide — гид по менеджерам зависимостей (NPM / Composer)
 
-**Ссылка на живой сайт (GitHub Pages):** _добавьте после деплоя_ → `https://github.com/vlksmoky/NPM-Composer-site/index.html`
+**Ссылка на живой сайт (GitHub Pages):** _добавьте после деплоя_ → `https://github.com/vlksmoky/NPM-Composer-site`
 
 ## О проекте
 
